@@ -1,0 +1,155 @@
+/* The standard stylesheet used for the page */
+
+body
+{
+	background-color: #FFE8AA;
+}
+
+h1, h2, h3
+{
+	font-family: "Helvetica";
+	font-weight: bold;
+}
+
+p, a
+{
+	font-family: "Helvetica";
+}
+
+#header
+{
+	position:relative;
+	background: url('images/headerBackgroundPic.jpg');
+	color: #ffffff;
+	border-radius: 20px;
+	top:20px;
+	height:250px;
+}
+
+#socialMediaButtons
+{
+	width:190px;
+	float:right;
+}
+
+#headerTitle
+{
+	font-size: 500%;
+}
+
+#headerSubTitle
+{
+	position:relative;
+	top:-20px;
+}
+
+.well
+{
+	position:relative;
+	background-color: rgba(245, 245, 245, 0.8);
+	border-radius: 20px;
+	top:20px;
+	right:7px;
+}
+
+ul,li
+{ 
+	list-style-type: none;
+	list-style-position:inside;
+	margin:0;
+    padding:0; 
+}
+
+#body
+{
+	position:relative;
+	top:40px;
+	background-color:#FFFFFF;
+	border-radius: 20px;
+	padding: 50px;
+}
+
+#sideMenu
+{
+	border-radius: 20px;
+}
+
+#content
+{
+	top:30px;
+	border-radius: 20px;
+}
+
+#footer
+{
+	background-color:#123456;
+	color:#ffffff;
+	border-radius: 20px;
+	position:relative;
+	top:60px;
+	padding:1px;
+}
+
+.btn
+{
+	background-color:#123456;
+	color:#ffffff;
+	width:170px;
+}
+
+hr
+{
+	border-color: #484848 ;
+	background-color: #484848 ;
+}
+
+#footer
+{
+	text-align:center;
+}
+
+#gameImages
+{
+	float:left;
+}
+
+figure 
+{
+	vertical-align: top;
+    display: inline-block;
+    margin: 20px; 
+}
+
+figure figcaption 
+{
+	text-align:center;
+}
+
+.contentButtons
+{
+	background-image:none;
+	background-color:#123456;
+	color:#ffffff;
+	width:70px;
+	border-radius: 20px;
+	border: none;
+    outline:none;
+	outline:0;
+	float:right;
+	box-shadow: none;
+}
+
+.contentButtons:focus
+{
+	background-image:none;
+	box-shadow: none;
+	background-color:#123456;
+	color:#ffffff;
+	border: none;
+    outline:none;
+	outline:0;
+}
+
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+				C12726809 Gary Healy
+		</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="responsive.css">
+		<script src="portfolio.js"></script>
+	</head>
+
+	<body>
+		<!-- A javascript function that writes HTML that is repeated on every page, 
+			 therefore comforming to the DRY pholosophy -->
+		<script>repeatingContent();</script>
+			
+		<!-- Main Content -->
+		<div class ="col-sm-9" id="content">
+			<main>
+			
+					<!-- First article Heading -->
+					<!-- NOTE: The reason why the heading is outside the article tag is for toggling purposes. When the user hides the article, I would like them 
+						 to still be able to see the article heading and the toggle button -->
+					<h2> Expierience  
+					<br class="break" />
+					<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('Expierience', this)">Hide</button>
+					</h2>
+					<br class="break" />
+					
+					<!-- First Article -->
+					<article id = "Expierience">
+					<hr>
+					<h4>February 2015 – August 2015: Software Engineer Intern at Susquehanna International Group (SIG)</h4>
+					<p>	Worked as a Software Engineer Intern with the trading services team developing software and integration tests for 
+						trading applications. Technologies and Tools used: C#, SQL, XML, Visual Studio 2013 , Windows Forms, NUnit, WireShark, 
+						Perforce, Team City </p>
+					<br>
+					
+					<h4> January 2012 - February 2012: Work Placement at Anord Control Systems Ltd</h4>
+					<p>	Worked here for two weeks as part of the work placement module in the IT and Computing course in Drogheda Institute
+						of Further Education. I worked as a member of the IT department and assisted other members of the IT department in 
+						maintaining the computer network and carrying out computer repairs and upgrades. Anord also gave Me the opportunity
+						to build an Internal website for the company which stored the employee handbook and health and safety guidelines.
+					</p>
+					<br>
+				</article>
+				
+				<!-- Second article Heading-->
+				<h2>Skills
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('skills', this)">Hide</button>
+				</h2>
+				<br class="break" />
+				
+				<!-- Second article -->
+				<article id = "skills">
+					<hr>
+					<p><b> Programming Languages:</b> C#, Java, SQL, Python, C, PHP, JavaScript.</p> 
+					<p><b> Web Development:</b> HTML, CSS, Bootstrap.
+					<p><b> Tools, IDE's and Frameworks:</b> Visual Studio, Wireshark, Android, Processing, NUnit, Cordova, Django.
+					<p><b> Version Control:</b> Github, Perforce, Team City. </p>
+				</article>
+					
+				<!-- A link to the validated page I saved from w3schools -->
+				<br>
+				<a href="ExpieriencePageValidated.html">Click here to see the validation for this webpage from validator.w3.org</a>
+			</main>
+		</div>
+		
+		<script>
+			repeatingContent_Footer();
+		</script>
+	</body>
+</html>

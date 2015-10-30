@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+				C12726809 Gary Healy
+		</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="responsive.css">
+		<script src="portfolio.js"></script>
+
+	</head>
+
+	<body>
+		<!-- A javascript function that writes HTML that is repeated on every page, 
+			 therefore comforming to the DRY pholosophy -->
+		<script>
+			repeatingContent();
+		</script>
+		
+		<!-- Main Content -->
+		<div class ="col-sm-9" id="content">
+			<main>
+			
+				<!-- First article Heading-->
+				<!-- NOTE: The reason why the heading is outside the article tag is for toggling purposes. When the user hides the article, I would like them 
+					 to still be able to see the article heading and the toggle button -->
+				<h2>Games
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('games', this)">Hide</button>
+				</h2>
+				<br class="break" />
+				
+				<!-- First Article -->
+				<article id = "games">
+					<hr>
+						<p> In second year at Dublin Institute of Technology I became interested in 2D games development. I created three games using
+						the Processing Integrated Development Environment. The processing language builds on the Java language, but uses a simplified 
+						syntax and graphics programming model. To play some of these games, please click the images below. This will navigate 
+						you to <strong>www.OpenProcessing.org</strong> where the games are hosted. For best performance, I recommend that you play the games using the
+						<strong>Mozilla Firefox </strong> web browser. You can also fork these repositories from my GitHub page. 
+						You can find a link to my GitHub page in the header of this page to the left of the link to YouTube.</p>
+						<br>
+						
+						<figure>
+							<a href="http://www.openprocessing.org/sketch/157374">
+								<img id = "marsRoverPic" class="img-responsive img-thumbnail" src="marsRover.png" alt="Mars Rover Image" height="180" width="180">
+							</a>
+							<figCaption><strong> Mars Rover </strong></figCaption>	
+						</figure>
+						
+						<figure>
+							<a href = "http://www.openprocessing.org/sketch/157375">
+								<img id = "flappyBirdPic" class="img-responsive img-thumbnail" src="flappyBird.png" alt="Flappy Bird Image" height="180" width="180">
+							</a>
+							<figCaption><strong> Flappy Bird Clone </strong></figCaption>
+						</figure>
+						
+						<figure>
+							<a href = "http://www.openprocessing.org/sketch/157546">
+								<img id = "textRunPic" class="img-responsive img-thumbnail" src="taxiRun.png" alt="Taxi Run Image" height="160" width="170">
+							</a>	
+							<figCaption><strong> Taxi Run </strong></figCaption>
+						</figure>
+				</article>
+				
+				<!-- Second article Heading-->
+				<h2>DANI: Dynamic Artificial Non-Intelligence
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('ai', this)">Hide</button>
+				</h2>
+				<br class="break" />
+				
+				<!-- Second article -->
+				<article id = "ai">
+					<hr>
+					<p> This year at Dublin Institute of Technology I finally have the opportunity to study Artificial Intelligence which is something 
+						that has interested me for some time now. In second year I created a Chat Bot in C# called DANI, which is short for Dynamic Artificial 
+						Non-Intelligence. The user can communicate with DANI by typing on the command line. DANI uses collections to remember words and to
+						build a vocabulary. The user can also make DANI learn things by typing "Learn" followed by what the user wants DANI to learn. Example: typing
+						"Learn Michael Schumacher is a Formula One driver" makes Dani store the string "Michael Schumacher is a Formula One driver". The next time
+						Michal Schumacher or Formula one is referenced in a sentance, DANI is able to output this information on screen. I have included a youtube video
+						of an interaction with DANI below and you can also fork this project from GitHub by clicking the GitHub image link in the header next to the YouTube
+						link.
+					</p>
+					<br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/c_CAo6X1wK4" allowfullscreen></iframe>
+					<br>
+				</article>
+				
+				<!-- Third article heading -->
+				<h2>Personal Interests
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('personalInterests', this)">Hide</button>
+				</h2>
+				<br class="break" />
+				
+				<!-- Third article -->
+				<article id = "personalInterests">
+				<hr>
+					<ul>
+					  <li style="list-style-type: circle;">Music</li>
+					  <li style="list-style-type: circle;">Art</li>
+					  <li style="list-style-type: circle;">Film and TV</li>
+					</ul>
+				</article>
+				
+				<!-- A link to the validated page I saved from w3schools -->
+				<br>
+				<a href="InterestPageValidation.html">Click here to see the validation for this webpage from validator.w3.org</a>
+			</main>
+		</div>
+		
+		<script>
+			repeatingContent_Footer();
+		</script>
+	</body>
+</html>

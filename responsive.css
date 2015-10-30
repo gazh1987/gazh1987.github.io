@@ -1,0 +1,104 @@
+/* 	This CSS page deals with different screen sizes 
+*/
+
+/* 	When the screen size is smaller than 767px, this is the 
+	style that will be appyed to the page.
+*/
+@media screen and (max-width: 767px) 
+{	
+	iframe, object, embed 
+	{
+        max-width: 100%;
+	}
+	
+	.well
+	{
+		background-color: rgba(0,0,0,0);
+		border:none;
+	}
+	
+	.btn
+	{
+		background-color:#123456;
+		color:#ffffff;
+		width:170px;
+		text-align:center;
+	}
+	
+	h1, h3
+	{
+		text-align:center;
+	}
+	p
+	{
+		padding:10px;
+	}
+	
+	#linkedInPic
+	{
+		max-width:100%; 
+		height:auto;
+		margin: 0 auto;	
+	}
+	
+	#header
+	{
+		position:relative;
+		background: url('images/headerBackgroundPic.jpg');
+		color: #ffffff;
+		border-radius: 20px;
+		top:20px;
+		height:190px;
+	}
+	
+	#socialMediaButtons
+	{
+		position:absolute;
+		top:130px;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+	
+    #headerTitle
+	{
+		position:relative;
+		top:20px;
+		font-size: 260%;
+	}
+
+	#headerSubTitle
+	{
+		position:relative;
+		top:0px;
+		font-size:150%;
+	}
+	
+	#content	
+	{
+		top:0px;
+	}
+	
+	#footer
+	{
+		height:60px;
+	}
+	
+	.contentButtons
+	{
+		width:70px;
+		float:left;
+	}
+}
+
+@media screen and (min-width: 767px)
+{
+	/* 	This break is used when the website is beig used on a mobile
+		device. It pushed the toggle button below the heading of the section
+		so as to make the site look neater on smaller devices. 
+	*/
+    .break 
+	{ 
+		display: none; 
+	}
+}

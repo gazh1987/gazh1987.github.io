@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+				C12726809 Gary Healy
+		</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="stylesheet" href="responsive.css">
+		<script src="portfolio.js"></script>
+	</head>
+
+	<body>
+		<!-- A javascript function that writes HTML that is repeated on every page, 
+			 therefore comforming to the DRY pholosophy -->
+		<script>repeatingContent();</script>
+
+		<!-- Main Content -->
+		<div class ="col-sm-9" id="content">
+			<main>
+				
+				<!-- First article Heading-->
+				<!-- NOTE: The reason why the heading is outside the article tag is for toggling purposes. When the user hides the article, I would like them 
+					 to still be able to see the article heading and the toggle button -->
+				<h2>Third Level Education
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('thirdLevelEducation', this)">Hide</button>
+				</h2>
+				<br class="break" />
+				
+				<!-- First Article -->
+				<article id = "thirdLevelEducation">
+					<hr>
+					<h4>2012 – Present: BSc Honours Computer Science at Dublin Institute of Technology</h4>
+					<p> Currenty in my fourth and final year specialising in Applied Intelligence, Geographical Information
+						systems and Rich Web Applications.</p>
+					<p><b>Activities and Socities:</b> First year programming lab supervisor, Wells for Zoe charity organisation
+					, Netsoc.</p>
+					<ul>
+						<li><b>First Year Grade:</b> 2.1 average </li>
+						<li><b> Second Year Grade:</b> 2.1 average </li>
+						<li><b> Third Year Grade:</b> 2.1 average</li>
+					</ul>
+					
+					<br>
+					<h4>2011 – 2012: Level 5 Fetac award in IT and Computing at Drogheda Institute of Further Education</h4>
+					<p> Graduated with 10 distinctions. I also gained some work experience in IT while working at Anord Control 
+						Systems Ltd for two weeks as part of the Work Experience module.</p>
+					<br>
+				</article>
+				
+				<!-- Second article Heading-->
+				<h2>Second Level Education
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('secondLevelEducation', this)">Hide</button>
+				</h2>
+				<br class="break" />
+				
+				<!-- Second article -->
+				<article id = "secondLevelEducation">
+					<hr>
+					<h4>1999 – 2004: Leaving Certificate at St.Josephs C.B.S</h4>
+					<p> Studied: Mathematics, English, Irish, French, Technical Graphics, Agricultural Science, Geography.</p>
+					<p><b> Overall Grade: </b> 53% average </p>
+					<br>
+				</article>
+				
+				<!-- A link to the validated page I saved from w3schools -->
+				<br>
+				<a href="EducationPageValidation.html">Click here to see the validation for this webpage from validator.w3.org</a>
+			</main>
+		</div>
+		
+		<script>
+			repeatingContent_Footer();
+		</script>
+	</body>
+</html>
