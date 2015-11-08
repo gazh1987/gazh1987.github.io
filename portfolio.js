@@ -24,23 +24,6 @@ function toggle_visibility(id, param)
 }
 
 /**
-	Name: 			enterYourName
-	Parameters: 	None
-	Description: 	When the Enter Your Name button is pressed on the index page, this function is 
-					called. First of all, it prompts the user to enter his/her name. Then it takes
-					the name entered and displays a personal greeting to the user by altering the DOM.
-**/
-function enterYourName()
-{
-	var name = prompt("Please enter your name");
-	if (name != null) 
-	{
-        document.getElementById("greeting").innerHTML =
-        "<strong>Hi " + name + "! Thanks for visiting the site. </strong>";
-    }
-}
-
-/**
 	Name: 			repeatingContent
 	Description:	Writes HTML for Header and side menu so as to conformto DRY pholosophy
 **/
@@ -66,7 +49,7 @@ function repeatingContent()
 	document.write('<li><a href="index.html" class="btn btn-default center-block " role="button" style="border-radius: 20px;"><b>Home</b></a></li>');
 	document.write('<li><a href="expierience.html" class="btn btn-default center-block" role="button" style="border-radius: 20px;"><b>Experience</b></a></li>');
 	document.write('<li><a href="education.html" class="btn btn-default center-block" role="button" style="border-radius: 20px;"><b>Education</b></a></li>');
-	document.write('<li><a href="interests.html" class="btn btn-default center-block" role="button" style="border-radius: 20px;"><b>Interests</b></a></li></ul></div><br></div>');
+	document.write('<li><a href="interests.html" class="btn btn-default center-block" role="button" style="border-radius: 20px;"><b>Blog</b></a></li></ul></div><br></div>');
 }
 
 /**

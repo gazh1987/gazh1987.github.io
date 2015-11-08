@@ -13,6 +13,11 @@
 		<link rel="stylesheet" href="responsive.css">
 		<script src="portfolio.js"></script>
 
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<style>#map {height: 300px;}</style>
+
 	</head>
 
 	<body>
@@ -25,57 +30,92 @@
 		<!-- Main Content -->
 		<div class ="col-sm-9" id="content">
 			<main>
-			
-				<!-- First article Heading-->
-				<!-- NOTE: The reason why the heading is outside the article tag is for toggling purposes. When the user hides the article, I would like them 
-					 to still be able to see the article heading and the toggle button -->
+				<h2>LeafletJS
+				<br class="break" />
+				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('leaflet', this)">Hide</button>
+				</h2>
+				<p><i>Posted 8th November 2015 </i></p>
+				<br class="break" />
+				<article id="leaflet"/>
+					<hr>
+					<p> In my research for my fourth year project I dicovered this great JavaScript library called LeafletJS. Leaflet is "an open-source JavaScript library for mobile-friendly interactive maps". Its very easy to use, I got the map below up and running in  under twenty minutes. The map here basically checks your current location using your devices GPS and then displays it on the map. Clicking the blue icon on the map shows you how many meters away from the current point Leaflet thinks you are. </p>
+
+					<p> The map here is pretty simple, but Leaflet does have plenty of plugins that can make richer applications. A couple of plugins that I find interesting and that I will definatly be experimenting with are Leaflet Routing Machine that can add routing between two points to a Leaflet map, and also Leaflet.GeoSearch that adds support for geocoding (address lookup) to Leaflet.</p>
+
+					<p> Check out Leaflet <a href = "http://leafletjs.com/"> here.</a> Enjoy! </p>
+						
+					<div id = "map"></div>
+
+					<!-- Leaflet Script -->
+					<script>
+						var map = L.map('map', { zoomControl:false});
+						L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+								maxZoom: 18			
+						}).addTo(map);
+
+						function onLocationFound(e){
+							var radius = e.accuracy /2;
+							L.marker(e.latlng).addTo(map)
+								.bindPopup("You are within " + radius + "meters from this point");
+
+							L.circle(e.latlng, radius).addTo(map);
+						}
+
+						function onLocationError(e)
+						{
+							alert(e.message);
+						}
+
+						map.locate({setView: true, maxZoom: 16});
+						map.on('locationfound', onLocationFound);
+						map.on('locationerror', onLocationError);
+					</script>
+				</article>
+
 				<h2>Games
 				<br class="break" />
 				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('games', this)">Hide</button>
 				</h2>
 				<br class="break" />
-				
-				<!-- First Article -->
+					
 				<article id = "games">
 					<hr>
-						<p> In second year at Dublin Institute of Technology I became interested in 2D games development. I created three games using
-						the Processing Integrated Development Environment. The processing language builds on the Java language, but uses a simplified 
-						syntax and graphics programming model. To play some of these games, please click the images below. This will navigate 
-						you to <strong>www.OpenProcessing.org</strong> where the games are hosted. For best performance, I recommend that you play the games using the
-						<strong>Mozilla Firefox </strong> web browser. You can also fork these repositories from my GitHub page. 
-						You can find a link to my GitHub page in the header of this page to the left of the link to YouTube.</p>
-						<br>
-						
-						<figure>
-							<a href="http://www.openprocessing.org/sketch/157374">
-								<img id = "marsRoverPic" class="img-responsive img-thumbnail" src="marsRover.PNG" alt="Mars Rover Image" height="180" width="180">
-							</a>
-							<figCaption><strong> Mars Rover </strong></figCaption>	
-						</figure>
-						
-						<figure>
-							<a href = "http://www.openprocessing.org/sketch/157375">
-								<img id = "flappyBirdPic" class="img-responsive img-thumbnail" src="flappyBird.PNG" alt="Flappy Bird Image" height="180" width="180">
-							</a>
-							<figCaption><strong> Flappy Bird Clone </strong></figCaption>
-						</figure>
-						
-						<figure>
-							<a href = "http://www.openprocessing.org/sketch/157546">
-								<img id = "taxiRunPic" class="img-responsive img-thumbnail" src="taxiRun.PNG" alt="Taxi Run Image" height="160" width="170">
-							</a>	
-							<figCaption><strong> Taxi Run </strong></figCaption>
-						</figure>
+					<p> In second year at Dublin Institute of Technology I became interested in 2D games development. I created three games using
+					the Processing Integrated Development Environment. The processing language builds on the Java language, but uses a simplified 
+					syntax and graphics programming model. To play some of these games, please click the images below. This will navigate 
+					you to <strong>www.OpenProcessing.org</strong> where the games are hosted. For best performance, I recommend that you play the games using the
+					<strong>Mozilla Firefox </strong> web browser. You can also fork these repositories from my GitHub page. 
+					You can find a link to my GitHub page in the header of this page to the left of the link to YouTube.</p>
+					<br>
+							
+					<figure>
+						<a href="http://www.openprocessing.org/sketch/157374">
+						<img id = "marsRoverPic" class="img-responsive img-thumbnail" src="marsRover.PNG" alt="Mars Rover Image" height="180" width="180">
+						</a>
+						<figCaption><strong> Mars Rover </strong></figCaption>	
+					</figure>
+							
+					<figure>
+						<a href = "http://www.openprocessing.org/sketch/157375">
+						<img id = "flappyBirdPic" class="img-responsive img-thumbnail" src="flappyBird.PNG" alt="Flappy Bird Image" height="180" width="180">
+						</a>
+						<figCaption><strong> Flappy Bird Clone </strong></figCaption>
+					</figure>
+							
+					<figure>
+						<a href = "http://www.openprocessing.org/sketch/157546">
+						<img id = "taxiRunPic" class="img-responsive img-thumbnail" src="taxiRun.PNG" alt="Taxi Run Image" height="160" width="170">
+						</a>	
+						<figCaption><strong> Taxi Run </strong><figCaption>
+					</figure>
 				</article>
-				
-				<!-- Second article Heading-->
+
 				<h2>DANI: Dynamic Artificial Non-Intelligence
 				<br class="break" />
 				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('ai', this)">Hide</button>
 				</h2>
 				<br class="break" />
 				
-				<!-- Second article -->
 				<article id = "ai">
 					<hr>
 					<p> This year at Dublin Institute of Technology I finally have the opportunity to study Artificial Intelligence which is something 
@@ -91,15 +131,13 @@
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/c_CAo6X1wK4" allowfullscreen></iframe>
 					<br>
 				</article>
-				
-				<!-- Third article heading -->
+			
 				<h2>Personal Interests
 				<br class="break" />
 				<button type="button" class="btn btn-default contentButtons" onclick="toggle_visibility('personalInterests', this)">Hide</button>
 				</h2>
 				<br class="break" />
 				
-				<!-- Third article -->
 				<article id = "personalInterests">
 				<hr>
 					<ul>
@@ -108,10 +146,6 @@
 					  <li style="list-style-type: circle;">Film and TV</li>
 					</ul>
 				</article>
-				
-				<!-- A link to the validated page I saved from w3schools -->
-				<br>
-				<a href="InterestPageValidation.html">Click here to see the validation for this webpage from validator.w3.org</a>
 			</main>
 		</div>
 		
