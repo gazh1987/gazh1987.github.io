@@ -49,7 +49,7 @@
 
 					<!-- Leaflet Script -->
 					<script>
-						var map = L.map('map', { zoomControl:false});
+						var map = L.map('map', {});
 						L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 								maxZoom: 18			
 						}).addTo(map);
@@ -67,7 +67,7 @@
 							alert(e.message);
 						}
 
-						map.locate({setView: true, maxZoom: 16});
+						map.locate({setView: true, maxZoom: 16, enableHighAccuracy: true, timeout: 6000000});
 						map.on('locationfound', onLocationFound);
 						map.on('locationerror', onLocationError);
 					</script>
